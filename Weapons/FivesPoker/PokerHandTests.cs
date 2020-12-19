@@ -8,6 +8,78 @@ namespace CarnivalCrawlerTests.Weapons.FivesPoker
     public class PokerHandTests
     {
         [TestMethod]
+        public void Get_Card_At_Position()
+        {
+            PlayingCard[] cards =
+            {
+                new PlayingCard(0, 2),
+                new PlayingCard(2, 5),
+                new PlayingCard(3, 1),
+                new PlayingCard(2, 6),
+                new PlayingCard(3, 8)
+            };
+
+            IPokerHand hand = new PokerHand(cards);
+
+            Assert.AreEqual(cards[0], hand.GetCardAt(0));
+            Assert.AreEqual(cards[1], hand.GetCardAt(1));
+            Assert.AreEqual(cards[2], hand.GetCardAt(2));
+            Assert.AreEqual(cards[3], hand.GetCardAt(3));
+            Assert.AreEqual(cards[4], hand.GetCardAt(4));
+        }
+
+        [TestMethod]
+        public void Get_Card_Involved()
+        {
+            PlayingCard[] junk =
+            {
+                new PlayingCard(0, 2),
+                new PlayingCard(2, 5),
+                new PlayingCard(3, 1),
+                new PlayingCard(2, 6),
+                new PlayingCard(3, 8)
+            };
+            PlayingCard[] twoPair =
+            {
+                new PlayingCard(0, 2),
+                new PlayingCard(2, 5),
+                new PlayingCard(3, 5),
+                new PlayingCard(2, 4),
+                new PlayingCard(3, 4)
+            };
+            PlayingCard[] straightF =
+            {
+                new PlayingCard(0, 6),
+                new PlayingCard(0, 7),
+                new PlayingCard(0, 8),
+                new PlayingCard(0, 9),
+                new PlayingCard(0, 10)
+            };
+
+            IPokerHand hand1 = new PokerHand(junk);
+            IPokerHand hand2 = new PokerHand(twoPair);
+            IPokerHand hand3 = new PokerHand(straightF);
+
+            Assert.IsFalse(hand1.IsCardInHand(0));
+            Assert.IsFalse(hand1.IsCardInHand(1));
+            Assert.IsFalse(hand1.IsCardInHand(2));
+            Assert.IsFalse(hand1.IsCardInHand(3));
+            Assert.IsFalse(hand1.IsCardInHand(4));
+
+            Assert.IsFalse(hand2.IsCardInHand(0));
+            Assert.IsTrue(hand2.IsCardInHand(1));
+            Assert.IsTrue(hand2.IsCardInHand(2));
+            Assert.IsTrue(hand2.IsCardInHand(3));
+            Assert.IsTrue(hand2.IsCardInHand(4));
+
+            Assert.IsTrue(hand3.IsCardInHand(0));
+            Assert.IsTrue(hand3.IsCardInHand(1));
+            Assert.IsTrue(hand3.IsCardInHand(2));
+            Assert.IsTrue(hand3.IsCardInHand(3));
+            Assert.IsTrue(hand3.IsCardInHand(4));
+        }
+
+        [TestMethod]
         public void Junk_Hand()
         {
             PlayingCard[] junk1 =
