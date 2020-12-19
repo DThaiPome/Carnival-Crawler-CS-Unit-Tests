@@ -1,0 +1,17 @@
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\CarnivalCrawlerTests.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\CarnivalCrawlerTests.pdb
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\CarnivalCrawler.exe
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\CarnivalCrawler.pdb
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\CarnivalCrawler.exe.config
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\Visual Studio\Projects\CarnivalCrawlerTests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\Visual Studio\Projects\CarnivalCrawlerTests\obj\Debug\CarnivalCrawlerTests.csprojAssemblyReference.cache
+D:\Visual Studio\Projects\CarnivalCrawlerTests\obj\Debug\CarnivalCrawlerTests.csproj.CoreCompileInputs.cache
+D:\Visual Studio\Projects\CarnivalCrawlerTests\obj\Debug\CarnivalCrawlerTests.csproj.CopyComplete
+D:\Visual Studio\Projects\CarnivalCrawlerTests\obj\Debug\CarnivalCrawlerTests.dll
+D:\Visual Studio\Projects\CarnivalCrawlerTests\obj\Debug\CarnivalCrawlerTests.pdb
