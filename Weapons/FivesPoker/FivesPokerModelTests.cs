@@ -361,5 +361,45 @@ namespace CarnivalCrawlerTests.Weapons.FivesPoker
             }
             Assert.Fail();
         }
+
+        [TestMethod]
+        public void Two_Rounds()
+        {
+            PlayingCard[] cards;
+            this.model1.DrawHand();
+            cards = this.model1.GetCurrentHand();
+            Assert.AreEqual(new PlayingCard(1, 7), cards[0]);
+            Assert.AreEqual(new PlayingCard(3, 6), cards[1]);
+            Assert.AreEqual(new PlayingCard(3, 5), cards[2]);
+            Assert.AreEqual(new PlayingCard(0, 5), cards[3]);
+            Assert.AreEqual(new PlayingCard(2, 8), cards[4]);
+            this.model1.ExchangeCards(new bool[5] { false, false, false, true, false });
+            cards = this.model1.GetCurrentHand();
+            Assert.AreEqual(new PlayingCard(1, 7), cards[0]);
+            Assert.AreEqual(new PlayingCard(3, 6), cards[1]);
+            Assert.AreEqual(new PlayingCard(3, 5), cards[2]);
+            Assert.AreEqual(new PlayingCard(3, 8), cards[3]);
+            Assert.AreEqual(new PlayingCard(2, 8), cards[4]);
+            IPokerHand hand1 = this.model1.GetFinalHand();
+            this.model1.ResetHand();
+            this.model1.DrawHand();
+            cards = this.model1.GetCurrentHand();
+            Assert.AreEqual(new PlayingCard(3, 3), cards[0]);
+            Assert.AreEqual(new PlayingCard(0, 1), cards[1]);
+            Assert.AreEqual(new PlayingCard(2, 11), cards[2]);
+            Assert.AreEqual(new PlayingCard(1, 9), cards[3]);
+            Assert.AreEqual(new PlayingCard(1, 10), cards[4]);
+            this.model1.ExchangeCards(new bool[5] { true, false, false, true, true });
+            cards = this.model1.GetCurrentHand();
+            Assert.AreEqual(new PlayingCard(1, 8), cards[0]);
+            Assert.AreEqual(new PlayingCard(0, 1), cards[1]);
+            Assert.AreEqual(new PlayingCard(2, 11), cards[2]);
+            Assert.AreEqual(new PlayingCard(3, 4), cards[3]);
+            Assert.AreEqual(new PlayingCard(0, 11), cards[4]);
+            IPokerHand hand2 = this.model1.GetFinalHand();
+
+            Assert.AreEqual(PokerHandType.Pair, hand1.GetHandType());
+            Assert.AreEqual(PokerHandType.Pair, hand1.GetHandType());
+        }
     }
 }
